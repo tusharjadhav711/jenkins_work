@@ -1,0 +1,22 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+               println("Source is : "+env.source);
+            }
+        }
+        stage('Test') { 
+            steps {
+               println("Source is : "+env.source);
+               println("Node is : "+env.NODE_NAME);
+               println("Source is : "+env.WORKSPACE);
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                 println("Source is : "+env.source);
+            }
+        }
+    }
+}
